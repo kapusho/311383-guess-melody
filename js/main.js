@@ -1,19 +1,16 @@
-(function () {
-
-  let template = document.querySelector('template');
-
-  let loadTemplate = (templateName) => {
-    let content = template.content ? template.content : template;
-    return content.querySelector(templateName).cloneNode(true);
-  };
+import welcome from './module-welcome';
+import levelGenre from './module-level-genre';
+import result from './module-result';
+import levelArtist from './module-level-artist';
 
 
   let slides = [
-    loadTemplate('.main--welcome'),
-    loadTemplate('.main--level-artist'),
-    loadTemplate('.main--level-genre'),
-    loadTemplate('.main--result')
+    welcome,
+    levelGenre,
+    levelArtist,
+    result
   ];
+
   let current = -1;
 
   let select = (index) => {
@@ -34,4 +31,4 @@
   };
 
   select(0);
-})();
+
