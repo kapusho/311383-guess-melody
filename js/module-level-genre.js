@@ -1,6 +1,6 @@
 import createElementFromTemplate from './create-element.js';
 const levelGenre = createElementFromTemplate(`\
-   <section class="main main--level main--level-genre">
+<section class="main main--level main--level-genre">
     <h2 class="title">Выберите инди-рок треки</h2>
     <form class="genre">
       <div class="genre-answer">

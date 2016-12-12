@@ -1,7 +1,7 @@
 import createElementFromTemplate from './create-element.js';
 
 const welcome = createElementFromTemplate(`\
-  <section class="main main--welcome">
+<section class="main main--welcome">
     <section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
     <button class="main-play">Начать игру</button>
     <h2 class="title main-title">Правила игры</h2>
