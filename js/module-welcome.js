@@ -1,4 +1,6 @@
+import levelArtist from './module-level-artist';
 import createElementFromTemplate from './create-element.js';
+import drawBlock from './draw-block.js';
 
 const welcome = createElementFromTemplate(`\
 <section class="main main--welcome">
@@ -11,6 +13,12 @@ const welcome = createElementFromTemplate(`\
       На&nbsp;каждую мелодию всего 3 варианта ответа.<br>
       Удачи!
     </p>
-  </section>`);
+</section>`);
+
+const playButton = welcome.querySelector('.main-play');
+
+playButton.onclick = (e) => {
+  drawBlock(levelArtist);
+};
 
 export default welcome;

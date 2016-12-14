@@ -1,4 +1,7 @@
+import result from './module-result';
 import createElementFromTemplate from './create-element.js';
+import drawBlock from './draw-block.js';
+
 const levelGenre = createElementFromTemplate(`\
 <section class="main main--level main--level-genre">
     <h2 class="title">Выберите инди-рок треки</h2>
@@ -30,5 +33,19 @@ const levelGenre = createElementFromTemplate(`\
       <button class="genre-answer-send" type="submit">Ответить</button>
     </form>
   </section>`);
+
+const buttonAnswer = levelGenre.querySelector('.genre-answer-send');
+buttonAnswer.disabled = true;
+
+buttonAnswer.onclick = (e) => {
+  drawBlock(result);
+};
+
+const answers = levelGenre.querySelectorAll('.genre-answer');
+for (let i = 0; i < answers.length; i++) {
+  answers[i].onclick = (e) => {
+    buttonAnswer.disabled = false;
+  };
+}
 
 export default levelGenre;

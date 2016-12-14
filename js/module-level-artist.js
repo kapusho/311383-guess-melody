@@ -1,4 +1,6 @@
 import createElementFromTemplate from './create-element.js';
+import levelGenre from './module-level-genre';
+import drawBlock from './draw-block.js';
 
 const levelArtist = createElementFromTemplate(`\
 <section class="main main--level main--level-artist">
@@ -48,5 +50,13 @@ const levelArtist = createElementFromTemplate(`\
     </div>
   </section>
 `);
+
+const answers = levelArtist.querySelectorAll('.main-answer');
+
+for (let i = 0; i < answers.length; i++) {
+  answers[i].onclick = (e) =>{
+    drawBlock(levelGenre);
+  };
+}
 
 export default levelArtist;
