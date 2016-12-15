@@ -9,7 +9,6 @@ const levelArtist = createElementFromTemplate(`\
         cx="390" cy="390" r="370"
         class="timer-line"
         style="filter: url(.#blur); transform: rotate(-90deg) scaleY(-1); transform-origin: center"></circle>
-
       <div class="timer-value" xmlns="http://www.w3.org/1999/xhtml">
         <span class="timer-value-mins">02</span><!--
         --><span class="timer-value-dots">:</span><!--
@@ -53,10 +52,10 @@ const levelArtist = createElementFromTemplate(`\
 
 const answers = levelArtist.querySelectorAll('.main-answer');
 
-for (let i = 0; i < answers.length; i++) {
-  answers[i].onclick = (e) =>{
+answers.forEach((answer)=> {
+  answer.onclick = (e) => {
     drawBlock(levelGenre);
   };
-}
+});
 
 export default levelArtist;

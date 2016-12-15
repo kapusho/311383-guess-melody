@@ -42,10 +42,11 @@ buttonAnswer.onclick = (e) => {
 };
 
 const answers = levelGenre.querySelectorAll('.genre-answer');
-for (let i = 0; i < answers.length; i++) {
-  answers[i].onclick = (e) => {
+
+answers.forEach((answer) =>{
+  answer.onclick = (e) => {
     buttonAnswer.disabled = false;
   };
-}
+});
 
 export default levelGenre;
