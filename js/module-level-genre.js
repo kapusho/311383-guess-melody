@@ -38,6 +38,7 @@ const buttonAnswer = levelGenre.querySelector('.genre-answer-send');
 buttonAnswer.disabled = true;
 
 buttonAnswer.onclick = (e) => {
+  e.preventDefault();
   drawBlock(result);
 };
 
